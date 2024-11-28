@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .firstPart {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+}
+
+header .firstPart  h1 {
+    font-weight: bold;
+}
+
+header .firstPart .shopIcon{
+    width: 100px;
+    border: 4px solid green;
+    border-radius: 50%;
+}
+
+header menu {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+header menu button {
+    background-color: #879400;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+
+    height: 40px;
+    padding: 4px 32px;
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 20px;
+    background-color: #111111;
+    padding: 16px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.card img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card .characteristics {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 50%;
+}
+
+.card .characteristics h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.card .characteristics h2 span {
+    color: #FEBE01;
+}
+
+.card .characteristics p {
+    font-size: 16px;
+    color: #999999;
+}
+
+.card .characteristics p span{
+    color: #FEBE01;
+}
+
+.card .characteristics button {
+    background-color: #FEBE01;
+    color: #111111;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+
+    width: 50%;
+}
+
+body {
+    margin-bottom: 32px;
+}
