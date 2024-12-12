@@ -1,126 +1,195 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 main {
-    font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header .firstPart {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
 }
 
-header .firstPart  h1 {
-    font-weight: bold;
+header .firstPart h1 {
+  font-weight: bold;
 }
 
-header .firstPart .shopIcon{
-    width: 100px;
-    border: 4px solid green;
-    border-radius: 50%;
+header .firstPart .shopIcon {
+  width: 100px;
+  border: 4px solid green;
+  border-radius: 50%;
 }
 
 header menu {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
 }
 
-header menu button {
-    background-color: #879400;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-weight: bold;
+header menu div.firstRowMenu,
+header menu div.secondRowMenu {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
 
-    height: 40px;
-    padding: 4px 32px;
-    cursor: pointer;
+header menu div.firstRowMenu button,
+header menu div.secondRowMenu button {
+  background-color: #879400;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+
+  height: 40px;
+  width: 140px;
+  padding: 4px 16px;
+  cursor: pointer;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px;
 }
 
 .row {
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
 }
 
 .card {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    margin-top: 20px;
-    background-color: #111111;
-    padding: 16px;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 20px;
+  background-color: #111111;
+  padding: 16px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 800px;
 }
 
 .card img {
-    width: 50%;
-    height: auto;
-    border-radius: 5px;
+  width: 50%;
+  height: auto;
+  border-radius: 5px;
 }
 
 .card .characteristics {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 50%;
 }
 
 .card .characteristics h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 .card .characteristics h2 span {
-    color: #FEBE01;
+  color: #febe01;
 }
 
 .card .characteristics p {
-    font-size: 16px;
-    color: #999999;
+  font-size: 16px;
+  color: #999999;
 }
 
-.card .characteristics p span{
-    color: #FEBE01;
+.card .characteristics p span {
+  color: #febe01;
 }
 
 .card .characteristics button {
-    background-color: #FEBE01;
-    color: #111111;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 16px;
-    cursor: pointer;
+  background-color: #febe01;
+  color: #111111;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
 
-    width: 50%;
+  width: 50%;
 }
 
 body {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  header menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  header {
+    justify-content: center;
+    gap: 64px;
+  }
+
+  .card {
+    flex-direction: column;
+    width: 300px;
+  }
+  
+  .card img {
+    width: 75%;
+  }
+
+  .card .characteristics {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header menu {
+        margin-top: 16px;
+        flex-direction: column;
+    }
+    
+    body {
+        flex-direction: column;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .card img {
+        width: 100%;    
+    }
+
+    .card {
+        flex-direction: column;
+        width: 300px;
+
+        height: 400px;
+    }
+    .card .characteristics {
+        width: 100%;
+        gap: 24px;
+    }
+  }
